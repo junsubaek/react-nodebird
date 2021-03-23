@@ -2,7 +2,6 @@ import React, { useCallback, useEffect, useRef } from "react";
 import { Button, Form, Input } from "antd";
 import { useDispatch, useSelector } from "react-redux";
 import {
-  addPost,
   UPLOAD_IMAGES_REQUEST,
   REMOVE_IMAGE,
   ADD_POST_REQUEST,
@@ -91,11 +90,7 @@ function PostForm() {
       <div>
         {imagePaths.map((v, i) => (
           <div key={v} style={{ display: "inline-block" }}>
-            <img
-              src={`${backUrl}/${v}`}
-              style={{ width: "200px" }}
-              alt={v}
-            />
+            <img src={v} style={{ width: "200px" }} alt={v} />
             <div>
               <Button onClick={onRemoveImage(i)}>제거</Button>
             </div>
