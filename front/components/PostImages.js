@@ -2,7 +2,6 @@ import React, { useCallback, useState } from "react";
 import PropTypes from "prop-types";
 import { PlusOutlined } from "@ant-design/icons";
 import ImagesZoom from "../components/ImagesZoom";
-import { backUrl } from "../config/config";
 
 function PostImages({ images }) {
   const [showImagesZoom, setShowImagesZoom] = useState(false);
@@ -18,7 +17,7 @@ function PostImages({ images }) {
       <>
         <img
           role="presentation"
-          src={images[0].src}
+          src={`${images[0].src}`}
           alt={images[0].src}
           onClick={onZoom}
         />
@@ -33,14 +32,14 @@ function PostImages({ images }) {
         <img
           role="presentation"
           style={{ width: "50%" }}
-          src={images[0].src}
+          src={`${images[0].src}`}
           alt={images[0].src}
           onClick={onZoom}
         />
         <img
           role="presentation"
           style={{ width: "50%" }}
-          src={images[1].src}
+          src={`${images[1].src}`}
           alt={images[1].src}
           onClick={onZoom}
         />
@@ -55,7 +54,7 @@ function PostImages({ images }) {
         <img
           role="presentation"
           width="50%"
-          src={images[0].src}
+          src={`${images[0].src}`}
           alt={images[0].src}
           onClick={onZoom}
         />
