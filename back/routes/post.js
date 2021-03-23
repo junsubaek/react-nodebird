@@ -6,10 +6,7 @@ const { Post, Comment, Image, User, Hashtag } = require("../models");
 const { isLoggedIn } = require("./middlewares");
 const multerS3 = require("multer-s3");
 const AWS = require("aws-sdk");
-const dotenv = require("dotenv");
 const router = express.Router();
-
-dotenv.config();
 
 try {
   fs.accessSync("uploads");
